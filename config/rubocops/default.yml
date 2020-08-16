@@ -1,0 +1,33 @@
+Rails:
+  Enabled: true
+
+##############
+# Global rules
+
+AllCops:
+  TargetRubyVersion: 2.6
+  NewCops: enable
+  Exclude:
+    - '.git/**/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - Vagrantfile
+    - Guardfile
+  RSpec:
+    Patterns:
+    - _spec.rb
+    - "(?:^|/)spec/"
+  RSpec/FactoryBot:
+    Patterns:
+    - spec/factories/**/*.rb
+
+inherit_from:
+  - './bundler.yml'
+  - './layout.yml'
+  - './lint.yml'
+  - './metrics.yml'
+  - './naming.yml'
+  - './rails.yml'
+  - './rspec.yml'
+  - './security.yml'
+  - './style.yml'
