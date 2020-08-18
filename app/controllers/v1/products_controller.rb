@@ -18,6 +18,10 @@ class V1::ProductsController < V1Controller
 
   def queried_products
     @queried_products ||= begin
+      products = Product.eager_load(:department, :promotions).all
+      products = products.promo_code(filter_params[:promo_code]) if filter_params[:promo_code].present?
+      products = products.query(filter_params[:query]) if filter_params[:query].present?
+      products = products.department_id(filter_params[:department_id]) if filter_params[:department_id].present?
       # Had a consistent bug with this, so had to do without :/
       # initialize_filterrific(
       #     Product,
@@ -25,6 +29,8 @@ class V1::ProductsController < V1Controller
       #     persistence_id: false,
       #     sanitize_params: true
       #   ).find.includes(:department, :promotions)
+
+      products
     end
   end
 end
