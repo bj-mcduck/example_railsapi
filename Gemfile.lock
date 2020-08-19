@@ -45,6 +45,12 @@ GIT
   specs:
     rspec-support (3.10.0.pre)
 
+GIT
+  remote: https://github.com/tractionguest/openapi_parser.git
+  revision: 02a31f650d08a15fefb0392af8902dbc534cba4e
+  specs:
+    openapi_parser (0.11.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -192,7 +198,12 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rspec_contracts (0.1.4)
+      rails (>= 5.2, < 6.1.0)
+      rspec-rails
+      semverse
     ruby_dep (1.5.0)
+    semverse (3.0.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -226,6 +237,7 @@ DEPENDENCIES
   faker
   filterrific
   listen (>= 3.0.5, < 3.2)
+  openapi_parser!
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
@@ -234,6 +246,7 @@ DEPENDENCIES
   rspec-mocks!
   rspec-rails!
   rspec-support!
+  rspec_contracts (~> 0.1.1)
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data

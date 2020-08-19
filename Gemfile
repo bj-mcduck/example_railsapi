@@ -34,6 +34,8 @@ group :development, :test do
   gem 'awesome_print'
   gem 'annotate', require: false
   gem 'faker'
+  gem 'rspec_contracts', "~> 0.1.1"
+  gem "openapi_parser", github: "tractionguest/openapi_parser"
 
   # See: https://matthewhoelter.com/2019/09/12/setting-up-and-testing-rails-6.0-with-rspec-factorybot-and-devise.html
   # There may be other lines in this block already. Simply append the following after:
