@@ -34,6 +34,16 @@ group :development, :test do
   gem 'awesome_print'
   gem 'annotate', require: false
   gem 'faker'
+
+  # See: https://matthewhoelter.com/2019/09/12/setting-up-and-testing-rails-6.0-with-rspec-factorybot-and-devise.html
+  # There may be other lines in this block already. Simply append the following after:
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'master' # Previously '4-0-dev' or '4-0-maintenance' branch
+  end
+end
+
+group :test do
+  gem 'factory_bot_rails'
 end
 
 group :development do
