@@ -11,3 +11,6 @@ To try using the API, clone this backend repo and in the command line do the fol
 bundle install
 rails server
 ```
+
+In another terminal, follow the directions on [trufla_bm_frontend](https://github.com/brandonjmckay/trufla_bm_frontend).
+This will set you up a local React app to be able to work with the API.
